@@ -7,7 +7,10 @@ OP = -O0
 ARCH = 64
 LINKS = ${OP} -m${ARCH} -no-pie -nostdlib
 
-all: assemble link
+all: folders assemble link
+	
+folders:
+	@mkdir -p bin build
 
 assemble:
 	as ${ASM} --${ARCH} -o ${OBJ}
