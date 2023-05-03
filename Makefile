@@ -1,7 +1,8 @@
 NAME = coin
-ASM = ${NAME}.asm
-OBJ = ${NAME}.o
-ELF = ${NAME}.elf
+ASM = src/${NAME}.asm
+OBJ = build/${NAME}.o
+ELF = bin/${NAME}.elf
+BIN = bin/${NAME}
 OP = -O0
 ARCH = 64
 LINKS = ${OP} -m${ARCH} -no-pie -nostdlib
@@ -15,9 +16,9 @@ link:
 	gcc ${OBJ} ${LINKS} -o ${ELF}
 
 install: all
-	@cp ${ELF} ${NAME}
-	@cp ${NAME} /usr/local/bin
+	@cp ${ELF} ${BIN}
+	@cp ${BIN} /usr/local/bin
 
 clean:
-	@rm -vf ${NAME} ${OBJ} ${ELF} 
+	@rm -vf ${OBJ} ${ELF} ${BIN}
 
