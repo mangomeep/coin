@@ -2,7 +2,10 @@
 ### a coin flipper written in assembly for fun
 
 ## downloading
-to download it, select the zip option, or to download 
+to download it, select the zip option, or to download using git
+```sh
+$ git clone https://github.com/mangomeep/coin.git
+```
 
 ## building
 to build it into an executable ELF binary, just run
