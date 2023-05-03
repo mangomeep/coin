@@ -16,9 +16,9 @@ rand:
     mov %rax, [random]
     # AND random value with 1
     and %rax, 1
-    # jump to head if even
+    # jump to heads if even
     jz heads
-    # jump to tail if odd
+    # jump to tails if odd
     jmp tails
 
 heads:
